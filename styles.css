@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap");
+html {
+  width: 100%;
+  height: 100%;
+}
+html body {
+  width: 100%;
+  height: 100%;
+}
+html body main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: "League Spartan";
+  padding: 0 50px 0 50px;
+}
+html body main .text-section {
+  display: flex;
+  flex-direction: row;
+  color: hsl(300deg, 43%, 22%);
+  height: 50%;
+  padding: 50px;
+}
+html body main .text-section h1 {
+  font-weight: 700;
+}
+html body main .text-section .info-section {
+  width: 50%;
+  padding: 0 200px 0 20px;
+}
+html body main .text-section .ratings-section {
+  font-weight: 700;
+}
+html body main .text-section .ratings-section p {
+  background-color: hsl(300deg, 24%, 96%);
+  padding: 15px 0 15px 0;
+}
+html body main .text-section .ratings-section .rating-2 {
+  position: relative;
+  left: 35px;
+}
+html body main .text-section .ratings-section .rating-3 {
+  position: relative;
+  left: 70px;
+}
+html body main .cards-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 0 40px 0 40px;
+}
+html body main .cards-section .card {
+  width: 350px;
+  height: 200px;
+  background-color: hsl(300deg, 43%, 22%);
+  color: hsl(300deg, 24%, 96%);
+  padding: 15px;
+}
+html body main .cards-section .card .card-header {
+  display: flex;
+  flex-direction: row;
+}
+html body main .cards-section .card .card-header img {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+html body main .cards-section .card-2 {
+  position: relative;
+  top: 20px;
+}
+html body main .cards-section .card-3 {
+  position: relative;
+  top: 40px;
+}/*# sourceMappingURL=styles.css.map */
