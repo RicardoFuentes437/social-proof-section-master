@@ -21,6 +21,9 @@ html{
             flex-direction: column;
             font-family: 'League Spartan';
             padding: 0 50px 0 50px;
+            background: url('images/bg-pattern-top-desktop.svg'), url('images/bg-pattern-bottom-desktop.svg');
+            background-repeat: no-repeat;
+            background-position: left top, right bottom;
 
             .text-section{
                 display: flex;
@@ -43,7 +46,19 @@ html{
 
                     p{
                         background-color: $Light-Grayish-Magenta;
-                        padding: 15px 0 15px 0;
+                        padding: 15px 10px 15px 10px;
+
+                        .star-icons{
+                            padding-right: 20px;
+
+                            img{
+                                padding: 3px;
+                            }
+                        }
+
+                        br{
+                            display: none;
+                        }
                     }
 
                     .rating-2{
@@ -66,12 +81,12 @@ html{
 
                 .card{
                     width: 350px;
-                    height: 200px;
+                    height: 220px;
                     background-color: $Very-Dark-Magenta;
                     color: $Light-Grayish-Magenta;
-                    padding: 15px;
+                    padding: 30px;
 
-                    .card-header{
+                    .card-top-section{
                         display: flex;
                         flex-direction: row;
 
@@ -79,6 +94,14 @@ html{
                             border-radius: 50%;
                             width: 40px;
                             height: 40px;
+                        }
+
+                        p{
+                            padding-left: 10px;
+
+                            .verified{
+                                color: $Soft-Pink
+                            }
                         }
                     }
                 }
@@ -91,6 +114,128 @@ html{
                 .card-3{
                     position: relative;
                     top: 40px;
+                }
+            }
+        }
+
+        @media (max-width: 1260px) {
+            height: fit-content;
+
+            main{
+                padding: 0 10px 0 10px;
+
+                .text-section{
+                    padding: 30px 0px 0px 30px;
+
+                    .info-section{
+                        padding: 0 100px 0 20px;
+                    }
+                }
+
+                .cards-section{
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                    grid-template-rows: repeat(2, 1fr);
+
+                    .card-1{
+                        grid-column: 1;
+                        grid-row: 1;
+                    }
+
+                    .card-2{
+                        grid-column: 3;
+                        grid-row: 1;
+                        top: 0;
+                    }
+
+                    .card-3{
+                        grid-column: 2;
+                        grid-row: 2;
+                        top: 0;
+                    }
+                }
+            }
+
+            footer{
+                padding: 80px 0px 20px 0px;
+            }
+        }
+
+        @media (max-width: 1100px) {
+            main{
+
+                .text-section{
+                    .info-section{
+                        padding: 0 50px 0 20px;
+                    }
+                    
+                    .ratings-section{
+                        .rating-2{
+                            left: 0px;
+                        }
+    
+                        .rating-3{
+                            left: 0px;
+                        }
+                    }
+                }
+
+                .cards-section{
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    grid-template-rows: repeat(3, 1fr);
+
+                    .card-1{
+                        grid-column: 1;
+                        grid-row: 1;
+                    }
+
+                    .card-2{
+                        grid-column: 2;
+                        grid-row: 2;
+                        top: 0;
+                    }
+
+                    .card-3{
+                        grid-column: 1;
+                        grid-row: 3;
+                        top: 0;
+                    }
+                }
+            }
+        }
+
+        @media (max-width: 750px) {
+            main{
+                align-items: center;
+                justify-content: center;
+                background: url('images/bg-pattern-top-mobile.svg'), url('images/bg-pattern-bottom-mobile.svg');
+                background-repeat: no-repeat;
+                background-position: left top, right bottom;
+
+                .text-section{
+                    flex-direction: column;
+                    text-align: center;
+
+                    .info-section{
+                        width: 100%;
+                        padding: 0 20px 0 20px;
+                    }
+
+                    .ratings-section{
+                        p{
+                            line-height: 0.7cm;
+                            br{
+                                display: block;
+                            }  
+                        }
+                    }
+                }
+
+                .cards-section{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 15px;
                 }
             }
         }

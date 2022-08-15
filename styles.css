@@ -14,6 +14,9 @@ html body main {
   flex-direction: column;
   font-family: "League Spartan";
   padding: 0 50px 0 50px;
+  background: url("images/bg-pattern-top-desktop.svg"), url("images/bg-pattern-bottom-desktop.svg");
+  background-repeat: no-repeat;
+  background-position: left top, right bottom;
 }
 html body main .text-section {
   display: flex;
@@ -34,7 +37,16 @@ html body main .text-section .ratings-section {
 }
 html body main .text-section .ratings-section p {
   background-color: hsl(300deg, 24%, 96%);
-  padding: 15px 0 15px 0;
+  padding: 15px 10px 15px 10px;
+}
+html body main .text-section .ratings-section p .star-icons {
+  padding-right: 20px;
+}
+html body main .text-section .ratings-section p .star-icons img {
+  padding: 3px;
+}
+html body main .text-section .ratings-section p br {
+  display: none;
 }
 html body main .text-section .ratings-section .rating-2 {
   position: relative;
@@ -52,19 +64,25 @@ html body main .cards-section {
 }
 html body main .cards-section .card {
   width: 350px;
-  height: 200px;
+  height: 220px;
   background-color: hsl(300deg, 43%, 22%);
   color: hsl(300deg, 24%, 96%);
-  padding: 15px;
+  padding: 30px;
 }
-html body main .cards-section .card .card-header {
+html body main .cards-section .card .card-top-section {
   display: flex;
   flex-direction: row;
 }
-html body main .cards-section .card .card-header img {
+html body main .cards-section .card .card-top-section img {
   border-radius: 50%;
   width: 40px;
   height: 40px;
+}
+html body main .cards-section .card .card-top-section p {
+  padding-left: 10px;
+}
+html body main .cards-section .card .card-top-section p .verified {
+  color: hsl(333deg, 80%, 67%);
 }
 html body main .cards-section .card-2 {
   position: relative;
@@ -73,4 +91,100 @@ html body main .cards-section .card-2 {
 html body main .cards-section .card-3 {
   position: relative;
   top: 40px;
+}
+@media (max-width: 1260px) {
+  html body {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  html body main {
+    padding: 0 10px 0 10px;
+  }
+  html body main .text-section {
+    padding: 30px 0px 0px 30px;
+  }
+  html body main .text-section .info-section {
+    padding: 0 100px 0 20px;
+  }
+  html body main .cards-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+  html body main .cards-section .card-1 {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  html body main .cards-section .card-2 {
+    grid-column: 3;
+    grid-row: 1;
+    top: 0;
+  }
+  html body main .cards-section .card-3 {
+    grid-column: 2;
+    grid-row: 2;
+    top: 0;
+  }
+  html body footer {
+    padding: 80px 0px 20px 0px;
+  }
+}
+@media (max-width: 1100px) {
+  html body main .text-section .info-section {
+    padding: 0 50px 0 20px;
+  }
+  html body main .text-section .ratings-section .rating-2 {
+    left: 0px;
+  }
+  html body main .text-section .ratings-section .rating-3 {
+    left: 0px;
+  }
+  html body main .cards-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+  html body main .cards-section .card-1 {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  html body main .cards-section .card-2 {
+    grid-column: 2;
+    grid-row: 2;
+    top: 0;
+  }
+  html body main .cards-section .card-3 {
+    grid-column: 1;
+    grid-row: 3;
+    top: 0;
+  }
+}
+@media (max-width: 750px) {
+  html body main {
+    align-items: center;
+    justify-content: center;
+    background: url("images/bg-pattern-top-mobile.svg"), url("images/bg-pattern-bottom-mobile.svg");
+    background-repeat: no-repeat;
+    background-position: left top, right bottom;
+  }
+  html body main .text-section {
+    flex-direction: column;
+    text-align: center;
+  }
+  html body main .text-section .info-section {
+    width: 100%;
+    padding: 0 20px 0 20px;
+  }
+  html body main .text-section .ratings-section p {
+    line-height: 0.7cm;
+  }
+  html body main .text-section .ratings-section p br {
+    display: block;
+  }
+  html body main .cards-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
 }/*# sourceMappingURL=styles.css.map */
